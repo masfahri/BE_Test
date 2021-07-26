@@ -23,10 +23,6 @@ Route::get('/', function () {
     return view('dashboard', compact('candidate_lk', 'candidate_pr', 'candidates'));
 });
 
-// Route::get('/form_registrasi', function () {
-//     return view('form_registrasi');
-// });
-
 Route::name('form_registrasi.')->prefix('form_registrasi/')->group(function ()
 {
     Route::get('index',[CandidateController::class, 'index'])->name('index');
